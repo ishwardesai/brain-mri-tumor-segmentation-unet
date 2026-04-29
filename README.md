@@ -91,6 +91,15 @@ The repository includes:
 * Matplotlib
 * Scikit-learn
 
+## Key Skills Demonstrated
+
+* Medical image segmentation
+* Deep learning for computer vision
+* Semantic segmentation using U-Net
+* MRI image preprocessing
+* Model evaluation using Dice and IoU metrics
+* TensorFlow model training and evaluation
+  
 ## How to Run
 
 1. Install dependencies from requirements.txt
