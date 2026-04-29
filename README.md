@@ -1,14 +1,28 @@
 # Brain MRI Tumor Segmentation using U-Net
-
+Deep learning-based semantic segmentation of brain MRI scans using a U-Net architecture for tumor region detection.
 ## Project Overview
 
 This project implements a U-Net based deep learning pipeline for brain MRI tumor segmentation using semantic segmentation techniques. The model was trained to identify tumor regions from grayscale MRI scans and generate segmentation masks highlighting abnormal tissue regions.
 
+## Sample Segmentation Results
+
+### Tumor Overlay Visualization
+
+![Overlay Result](results/overlay_3.png)
+
+### Prediction Example
+
+![Prediction Result](results/prediction_3.png)
+
+### Training Metrics
+
+![Training Metrics](results/training_metrics.png)
 ## Dataset
 
 Dataset used:
 
 * LGG MRI Segmentation Dataset from Kaggle
+* Dataset source: https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
 
 The dataset contains:
 
@@ -50,15 +64,6 @@ The following metrics were used:
 Note:
 Pixel-wise accuracy can be misleading in segmentation tasks because most MRI pixels belong to the background class. Dice coefficient and IoU provide a more meaningful evaluation of segmentation overlap quality.
 
-## Results
-
-Final model performance:
-
-* Test Accuracy: 99.30%
-* Dice Coefficient: 0.5597
-* IoU Score: 0.3921
-* Test Loss: 0.0170
-
 ## Sample Outputs
 
 The repository includes:
@@ -66,6 +71,16 @@ The repository includes:
 * Training metric visualizations
 * Predicted segmentation masks
 * Tumor overlay visualizations
+
+## Final Results
+
+| Metric | Score |
+|---|---|
+| Test Accuracy | 99.30% |
+| Dice Coefficient | 0.5597 |
+| IoU Score | 0.3921 |
+| Test Loss | 0.0170 |
+
 
 ## Technologies Used
 
@@ -82,6 +97,10 @@ The repository includes:
 2. Download the dataset
 3. Update dataset path
 4. Run the notebook
+
+## Limitations
+
+The model performs reasonably on visible tumor regions but still produces some false positives and under-segmented predictions. Additional improvements such as data augmentation, Dice loss optimization, and deeper architectures may improve segmentation quality.
 
 ## Future Improvements
 
